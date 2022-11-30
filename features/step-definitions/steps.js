@@ -16,7 +16,7 @@ Given("User refresh the page if promo banner appears", async () => {
   }
 });
 
-When('User entry the word {word} in the search bar', async (string) => {
+When("User entry the word {word} in the search bar", async (string) => {
   const fieldForFearch = "input[type='search']";
   await $(fieldForFearch).setValue(`${string}`);
 });
@@ -28,7 +28,6 @@ When("User clicks the search button", async () => {
 
 Then("User checks that at least one item appears", async () => {
   const searchItems = "div > div[class='item-cell";
-  //   expect.toBeExisting(numberOfSearchItems);
   await $(searchItems).waitForExist(timerForElementToAppear);
 });
 
